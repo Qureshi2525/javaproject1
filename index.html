@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href= 
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
+        <!-- CDN of Bootstrap -->
+        <link rel="stylesheet" href= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+            integrity= 
+    "sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous"> 
+    
+        <!-- CDN of mark.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+            integrity= 
+    "sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+            crossorigin="anonymous"> 
+        </script> 
+
+    <style>
+        body{
+            margin: 20px;
+            cursor: pointer;
+        }
+    
+          .highlight {
+             background-color: rgb(243, 243, 106);
+             font-weight: bold;
+          }
+          .content{
+            width: 100%;
+            font-size: larger;
+          }
+    
+          .search2{
+                display: flex;
+    
+            }
+        
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        
+            .container {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            .box {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0PX 2PX 3PX gray;
+                margin: 20PX 40PX;
+                overflow: hidden;
+            }
+        
+            .box h2 {
+                font-size: 40PX;
+                text-align: center;
+                font-weight: bolder;
+                background-image: linear-gradient(to right, #77ebfa, #00cc99, #77ebfa);
+                color: #fff;
+                line-height: 70px;
+                font-style: italic;
+            }
+        
+            .box p {
+                color: rgb(124, 116, 116);
+                text-align: justify;
+                padding: 10px 30px;
+                line-height: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+        
+            #btn1 {
+                font-size: 15px;
+                background-image: linear-gradient(to right, #77ebfa, #00cc99, #77ebfa);
+                color: #fff;
+                font-weight: bolder;
+                padding: 10px 15px;
+                margin: 20px;
+                /* border: 2px solid #004b49; */
+                box-shadow: 3px 5px 11px lightgray;
+                float: right;
+                border-radius: 10PX;
+                display: none;
+                width: auto;
+            }
+        
+            #btn2,
+            #btn3 {
+                font-size: 15px;
+                background-image: linear-gradient(to right, #77ebfa, #00cc99, #77ebfa);
+                color: #fff;
+                font-weight: bolder;
+                padding: 10px 15px;
+                margin: 20px;
+                /* border: 2px solid #004b49; */
+                box-shadow: 3px 5px 11px lightgray;
+                float: right;
+                border-radius: 10PX;
+                display: none;
+                width: auto;        
+            }
+        
+            #btn0 {
+                font-size: 15px;
+                background-image: linear-gradient(to right, #77ebfa, #00cc99, #77ebfa);
+                color: #fff;
+                font-weight: bolder;
+                padding: 10px 15px;
+                margin: 20px;
+                /* border: 2px solid #71f17c; */
+                box-shadow: 3px 5px 11px lightgray;
+                float: right;
+                border-radius: 10PX;
+                width: auto;
+            }
+        
+            #btn:hover,
+            #btn1:hover,
+            #btn2:hover,
+            #btn3:hover {
+                box-shadow: 3px 5px 11px rgb(71, 70, 70);
+                cursor: pointer;
+
+            }
+        
+            #invisiblepara1 {
+                display: none;
+            }
+        
+            #invisiblepara2 {
+                display: none;
+            }
+        
+            #invisiblepara3 {
+                display: none;
+            }
+            header{
+                text-align: center;
+                /* padding-left: 50px; */
+                padding-top: 20px;
+                justify-content: center;
+                            }
+        </style>
+    
+</head>
+
+<body>
+
+    <h1><center>Yasir Rasheed CCO-118488 یاسر رشید </center></h1>
+    <h1> <center>JAVASCRIPT PROJECTS</center></h1>
+    <hr>
+    <marquee><b>YASIR RASHEED QURESHI WEB AND AAP CCO - 118488 TEACHER SIR RIZWAN BHATTI. JAVASCRIPT PROJECTS</b></marquee>
+    <hr>
+
+    <!-- Bulb on Off Project in Javascript -->
+    <header>
+        <h1>Bulb on Off Project in Javascript</h1>
+    </header>
+    <section>
+        <img onclick="changeImage()" src="https://i.postimg.cc/KjK1wL3c/bulb-off.png" id="bulb" width="200">
+        <div class="btn_container"><button id="on" class="bulb_btn" onclick="bulb_on()">On</button>
+        <button id="off" class="bulb_btn" onclick="bulb_off()">Off</button></div>
+        <div class="btn_container" class="onoff"><button class="bulb_btn" id="btn">Light On</button></div>
+    </section>
+    
+    <h2 id="clic">Click the light bulb to turn on/off the light.</h2>
+    
+    <!-- SHOW MORE OR LESS BUTTON & SEARCH LATTER Project IN JAVASCRIPT -->
+   
+    <header>
+        <h1>SHOW MORE OR LESS BUTTON & SEARCH LATTER IN JAVASCRIPT</h1>
+    </header>
+<section>
+    <div class="container">
+        <div class="box">
+            <h2>SHOW MORE OR LESS BUTTON <br>&<br> SEARCH LATTER</h2>
+   
+    <p class="content">  
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima impedit placeat eveniet sequi aut,
+    reprehenderit sunt rem vitae sed. Perferendis qui aperiam neque inventore nulla voluptatum explicabo
+    quis ducimus, nemo error veniam facilis facere quod recusandae quia minima ut praesentium molestiae
+    pariatur doloribus! Error ea doloremque, natus tempora laboriosam tenetur. Lorem ipsum dolor sit amet
+    consectetur, adipisicing elit. Aperiam neque totam iusto dolores voluptatibus quia libero minus laborum
+    molestias error ullam fugit unde labore aut incidunt repellendus perferendis reiciendis, soluta
+    provident dolor ad. Minus aliquid dolore placeat, ex numquam nemo? <span id="invisiblepara1">Lorem ipsum
+        dolor sit
+        amet consectetur adipisicing elit. Sunt, nesciunt. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Reiciendis quod est aliquid praesentium enim veniam dolorem! Saepe porro inventore
+        id nisi dolore quasi placeat minima cumque natus, perspiciatis delectus laborum? Corrupti, quis
+        debitis cumque </span><span id="invisiblepara2"> Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. At nemo velit quam aperiam autem, nobis fuga facere id molestiae consequuntur illo
+        magni explicabo quia est debitis accusantium, rem incidunt perspiciatis dolor. Natus dicta obcaecati
+        nostrum magnam vitae acc!</span><span id="invisiblepara3"> Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Hic eius doloribus quis magnam necessitatibus pariatur rerum
+        magni vero, autem omnis sit a harum, dicta nulla praesentium nam, iusto perspiciatis velit inventore
+        voluptas rem voluptatem reprehenderit ipsam! Cum illo accusamus iusto eius corrupti molestias. Modi
+        .</span></p>
+        <button type="button" id="btn0" onclick="readless()">SHOW MORE</button>
+        <button type="button" id="btn1" onclick="readless2()">SHOW MORE</button>
+        <button type="button" id="btn2" onclick="readless3()">SHOW MORE</button>
+        <button type="button" id="btn3" onclick="readless4()">SHOW LESS</button>
+        </div>
+        </div>
+   <form>
+    <div class="search2">
+   <h3 >Searching Latter is : </h3>
+   <h3 id="search1">  </h3>
+</div>
+      <input type="text" id="searchInput" placeholder="Search..." >
+      <button type="button" onclick="highlightText(); getValue()">Search</button >
+   </form>
+
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- SCIENTIFIC CALCULATOR PROJECT IN JAVASCRIPT -->
+<header>
+    <h1>SCIENTIFIC CALCULATOR PROJECT IN JAVASCRIPT</h1>
+</header>
+<section class="calculatorbody">
+    <div class="calculator">
+        <div class="saylani">
+          <div>SAYLANI</div>
+          <input type="text" id="scr1">
+        </div>
+          <div>
+            <input type="text" id="scr" placeholder="0">
+          </div>
+      
+          <div class="buttons">
+      
+            <div class="clrBtns">
+              <button id="acBtn" class="btn" onclick="clearScr()">AC</button>
+              <div class="yr">Yasir Rasheed</div>
+              <button id="delBtn" class="btn" onclick="backspace()">DEL</button>
+            </div>
+      <details>
+        <Summary class="scientific">SCIENTIFIC CALCULATOR</Summary>
+        <ol>
+           <div class="sciBtns">
+            <div class="row">
+              <button class="btn" onclick="sin()">sin</button>
+              <button class="btn" onclick="cos()">cos</button>
+              <button class="btn" onclick="tan()">tan</button>
+              <button class="btn" onclick="log()">log</button>
+            </div>
+            <div class="row">
+              <button class="btn" onclick="ln()">ln</button>
+              <button class="btn" onclick="sqrt()">√</button>
+              <button class="btn" onclick="pi()">π</button>
+              <button class="btn" onclick="factorial()">x!</button>
+            </div>
+            <div class="row">
+              <button class="btn" onclick="e()">e</button>
+              <button class="btn" onclick="round()"> &lceil;x&rfloor; </button>
+              <button class="btn" onclick="ceil()"> &lceil;x&rceil; </button>
+              <button class="btn" onclick="floor()"> &lfloor;x&rfloor; </button>
+            </div>
+            <div class="row">
+              <button class="btn" onclick="square()">x<span>2</span></button>
+              <button class="btn" onclick="appendToDisplay('^')">x<span>y</span></button>
+              <button class="btn" onclick="appendToDisplay('&#40;')"> &#40; </button>
+              <button class="btn" onclick="appendToDisplay('&#41;')"> &#41; </button>
+            </div>
+        </ol>
+      </details>
+  </div>
+      
+      
+            <div class="numBtns">
+              <div class="row">
+                <button onclick="appendToDisplay('7')">7 </button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')">/</button>
+              </div>
+      
+              <div class="row">
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')">*</button>
+              </div>
+      
+              <div class="row">
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')">-</button>
+              </div>
+      
+              <div class="row">
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button id="equalBtn" onclick="calculate()">=</button>
+                <button onclick="appendToDisplay('+')">+</button>
+              </div>
+            </section>
+
+
+
+<!-- SHOW MORE & LESS PROJECT -->
+<script>
+    function readless() {
+        var para1 = document.getElementById("invisiblepara1")
+        var para2 = document.getElementById("invisiblepara2")
+        var para3 = document.getElementById("invisiblepara3")
+        var btn = document.getElementById("btn0")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        para2.style.display = "none"
+        para3.style.display = "none"
+        para1.style.display = "inline"
+        btn.style.display = "none"
+        btn1.style.display = "inline"
+
+    }
+    function readless2() {
+        var para1 = document.getElementById("invisiblepara1")
+        var para2 = document.getElementById("invisiblepara2")
+        var para3 = document.getElementById("invisiblepara3")
+        var btn = document.getElementById("btn0")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        para2.style.display = "inline"
+        btn2.style.display = "inline"
+        btn1.style.display = "none"
+    }
+    function readless3() {
+        var para1 = document.getElementById("invisiblepara1")
+        var para2 = document.getElementById("invisiblepara2")
+        var para3 = document.getElementById("invisiblepara3")
+        var btn = document.getElementById("btn0")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        para3.style.display = "inline"
+        btn2.style.display = "none"
+        btn1.style.display = "none"
+        btn3.style.display = "inline"
+    }
+    function readless4() {
+        var para1 = document.getElementById("invisiblepara1")
+        var para2 = document.getElementById("invisiblepara2")
+        var para3 = document.getElementById("invisiblepara3")
+        var btn = document.getElementById("btn0")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        para3.style.display = "none"
+        para2.style.display = "none"
+        para1.style.display = "none"
+        btn2.style.display = "none"
+        btn1.style.display = "none"
+        btn3.style.display = "none"
+        btn.style.display = "inline"
+    }
+
+// SEARCH
+      function highlightText() {
+         const searchInput = document.getElementById('searchInput');
+         const searchValue = searchInput.value.trim();
+         const contentElement = document.querySelector('.content');
+   
+         if (searchValue !== '') {
+            const content = contentElement.textContent;
+            const regex = new RegExp(searchValue, 'gi');
+            const highlightedContent = content.replace(
+               regex,
+               (match) => `<span class="highlight">${match}</span>`
+            );
+            contentElement.innerHTML = highlightedContent;
+          } else {
+             contentElement.innerHTML = contentElement.textContent;
+          }
+          
+       }
+   function getValue(){
+    let text1 =document.getElementById("searchInput").value;
+    document.getElementById("search1").innerHTML= text1
+   }
+
+       
+   </script>
+
+
+
+<!-- BULB JAVASCRIPT FILE -->
+    <script src="app.js"></script>
+    <!-- SCIENTIFIC CALCULATOR PROJECT IN JAVASCRIPT -->
+    <script src="calculator.js"></script>
+  </body>
+</html>
